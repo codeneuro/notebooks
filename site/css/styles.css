@@ -16,9 +16,20 @@ a {
 }
 
 a {
+    cursor: pointer;
+}
+
+.big {
     border-bottom: 3px dotted white;
     color: rgb(255,239,143);
-    cursor: pointer;
+}
+
+.big:hover {
+    color: rgb(255,230,10);
+}
+
+.big:active {
+    color: rgb(255,211,12);
 }
 
 .small {
@@ -27,12 +38,13 @@ a {
 }
 
 .small:hover {
-    color: rgb(150,150,150);
+    color: rgb(125,125,125);
 }
 
-a:hover {
-    color: rgb(255,239,10);
+.small:active {
+    color: rgb(170,170,170);
 }
+
 
 h2 {
     font-size: 46px;
