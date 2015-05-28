@@ -1,18 +1,16 @@
-setup-server:
+setup:
 	sudo yum update -y
 	sudo yum install -y httpd24 php56 mysql55-server php56-mysqlnd
 	sudo service httpd start
-
-setup-docker:
 	sudo yum install -y docker
 	sudo usermod -a -G docker ec2-user
 	sudo service docker start
 
-build:
+deploy:
 	sudo rm -rf /var/www/html/
 	sudo cp -a site/. /var/www/html/
 
-deploy:
+launch:
 	docker pull codeneuro/notebooks
 	export TOKEN=$( head -c 30 /dev/urandom | xxd -p )
 	docker run --net=host -d -e CONFIGPROXY_AUTH_TOKEN=$TOKEN --name=proxy jupyter/configurable-http-proxy --default-target http://127.0.0.1:9999
