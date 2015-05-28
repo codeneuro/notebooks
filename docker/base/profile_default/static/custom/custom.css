@@ -1,0 +1,27 @@
+@import url(http://fonts.googleapis.com/css?family=Abel);
+
+/* GLOBALS */
+body {background-color: white;}
+a {color: rgb(20,20,20); font-size: 16px; font-family: 'Abel';}
+
+/* INTRO PAGE */
+.toolbar_info, .list-container {color: black;}
+
+/* NOTEBOOK */
+
+div#notebook {border-top: none;}
+
+div.input_prompt {color: #b48ead;}
+div.output_prompt {color: #ab7967;}
+div.input_area {
+  border-radius: 3px;
+  border: 1px solid #c0c5ce;
+}
+div.output_area pre {font-weight: normal; color: #4f5b66;}
+div.output_subarea {font-weight: normal; color: #4f5b66;}
+
+div.cell.selected {border-radius: 3px}
+
+div.edit_mode {border-color: rgb(69, 133, 255);}
+
+div#menus {background: none; border: none;}
