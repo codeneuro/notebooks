@@ -1,17 +1,19 @@
-setup-docker:
+setup-update:
 	sudo yum update -y
-	sudo yum update -y
+
+setup-docker: setup-update
 	sudo yum install -y docker
 	sudo usermod -a -G docker ec2-user
 	sudo service docker start
 	docker pull codeneuro/notebooks
 
-setup-server:
+setup-server: setup-update
+	sudo yum update -y
 	sudo yum install -y httpd24 php56 mysql55-server php56-mysqlnd
 	sudo service httpd start
 
 site: setup-server
-	cp -r site /var/www/html
+	sudo cp -a site/. /var/www/html/
 
 notebooks: setup-docker
 	export TOKEN=$( head -c 30 /dev/urandom | xxd -p )
@@ -22,5 +24,6 @@ kill-docker:
 	docker stop $(docker ps -a -q)
 	docker rm $(docker ps -a -q)
 
-
+clean:
+	sudo rm -rf /var/www/html/
 
