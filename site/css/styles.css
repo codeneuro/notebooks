@@ -1,0 +1,123 @@
+@font-face{
+    font-family:"AvenirNext";
+    src:url("../fonts/e9167238-3b3f-4813-a04a-a384394eed42.eot?#iefix");
+    src:url("../fonts/e9167238-3b3f-4813-a04a-a384394eed42.eot?#iefix") format("eot"),url("../fonts/1e9892c0-6927-4412-9874-1b82801ba47a.woff") format("woff"),url("../fonts/46cf1067-688d-4aab-b0f7-bd942af6efd8.ttf") format("truetype"),url("../fonts/52a192b1-bea5-4b48-879f-107f009b666f.svg#52a192b1-bea5-4b48-879f-107f009b666f") format("svg");
+}
+
+body {
+	background-color: rgb(69, 133, 255);
+	font-family: Abel;
+}
+
+a {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+a {
+    border-bottom: 3px dotted white;
+    color: rgb(255,239,143);
+    cursor: pointer;
+}
+
+.small {
+    border-bottom: 1px dotted rgb(60,60,60);
+    color: rgb(40,40,40);
+}
+
+.small:hover {
+    color: rgb(150,150,150);
+}
+
+a:hover {
+    color: rgb(255,239,10);
+}
+
+h2 {
+    font-size: 46px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 100;
+    color: rgb(238,238,238);
+}
+
+#top {
+	background-color: white;
+	margin-left: -8px;
+	margin-right: -8px;
+	margin-top: -8px;
+    padding-bottom: 65px;
+    padding-top: 7px;
+	//border-bottom: 5px rgb(69, 133, 255) dotted;
+}
+
+#bottom {
+    padding-top: 20px;
+}
+
+.info {
+	margin-top: 35px;
+	font-size: 24px;
+    line-height: 150%;
+}
+
+.launch-text {
+    font-family: "AvenirNext";
+	font-size: 48px;
+    font-style: italic;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+.launch-wrapper {
+    display: inline-block;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 8px;
+    margin-top: 90px;
+    border: 4px dotted rgb(69, 133, 255);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    background-color: rgb(69, 133, 255);
+}
+
+
+.launch {
+    pointer-events: all;
+	outline:none;
+    border-radius: 5px;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    font-size: 30px;
+    height: 100px;
+    width: 250px;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(69, 133, 255);
+    z-index: 0;
+    letter-spacing: 1px;
+    font-weight: 700;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+
+.launch:hover {
+    z-index: 1000;
+}
+
+.launch-wrapper:hover {
+    background-color: white;
+}
+
+.launch:active {
+    color: rgb(69, 133, 255);
+    background-color: white;
+}
