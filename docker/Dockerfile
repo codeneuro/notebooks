@@ -41,7 +41,6 @@ ENV NEUROFINDER_ROOT $HOME/neurofinder
 
 # Make Tutorial/Community/Neurofinder folders
 RUN mkdir $HOME/notebooks
-RUN mkdir $HOME/notebooks/community
 
 # Do the symlinking
 RUN mkdir $HOME/notebooks/neurofinder
