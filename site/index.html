@@ -1,69 +1,76 @@
 <head>
-	<meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="chrome=1">
-	<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
-	<title>Notebooks</title>
-	<link rel="stylesheet" href="css/styles.css">
-	<link rel="stylesheet" href="css/shelves.css">
-	<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
-	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="icon" sizes="16x16 32x32" href="favicon.ico?v=2">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+<title>Notebooks</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/shelves.css">
+<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<link rel="icon" sizes="16x16 32x32" href="favicon.ico?v=2">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <html>
 <body>
 
-	<section id="top">
+<section id="top">
 
-		<div class="row">
+	<div class="row">
 
-	    <div class="column-7">
-	      <img style="width: 600px; padding-top: 80px" src="svg/logo.svg">
-	    </div>
+    <div class="column-7">
+      <img style="width: 600px; padding-top: 80px" src="svg/logo.svg">
+    </div>
 
-	    <div class="prefix-1 column-3">
-	      <a class='launch-wrapper' href='http://notebooks.codeneuro.org:8000' target="_blank"><button class='launch'><p class='launch-text'>launch</p></button></a>
-	      <p class="info">runs live jupyter notebooks using <a class="small" href='https://github.com/docker/docker'>docker</a> and <a class="small" href='https://github.com/jupyter/tmpnb'>tmpnb</a></p>
-	    </div>
+    <div class="prefix-1 column-3">
+      <a class='launch-wrapper' href='http://notebooks.codeneuro.org:8000' target="_blank"><button class='launch'><p class='launch-text'>launch</p></button></a>
+      <p class="info">runs live jupyter notebooks using <a class="small" href='https://github.com/docker/docker'>docker</a> and <a class="small" href='https://github.com/jupyter/tmpnb'>tmpnb</a><br>available: X of 25</p>
+    </div>
 
-	  </div>
+  </div>
 
-	</section>
+</section>
 
-	<section id="bottom">
+<section id="bottom">
 
-		<div class="row">
-		
-			<div class="column-12">
-				<div class="row">
-					<div class="column-10 suffix-2">
-						<h2>explore publicly availiable <a href='http://datasets.codeneuro.org' class="big">data sets</a></h2>
-					</div>
-				</div>
-				<div class="row">
-					<div class="column-10 prefix-2">
-						<h2>try new libraries like <a class="big" href='http://thunder-project.org'>Thunder</a> and <a href='http://spark.apache.org'class="big">Spark</a></h2>
-					</div>
-				</div>
-				<div class="row">
-					<div class="column-10 prefix-1 suffix-1">
-						<h2>prototype analyses for <a href='http://codeneuro.org/neurofinder' class="big">benchmarking</a> challenges</h2>
-					</div>
+	<div class="row">
+	
+		<div class="column-12">
+			<div class="row">
+				<div class="column-10 suffix-2">
+					<h2>explore publicly availiable <a href='http://datasets.codeneuro.org' class="big">data sets</a></h2>
 				</div>
 			</div>
-
-		</div>
-
-		<div class="row" style="max-width: 1450px">
-			<div class="column-5 prefix-7" style="text-align: right">
-			<span style='margin-left: 95px'><a class="social-link" href="mailto:info@codeneuro.org"><i id="icon" class="fa fa-envelope-square fa-4x"></i></a><a class="social-link" href="https://twitter.com/CodeNeuro"><i id="icon" class="fa fa-twitter-square fa-4x"></i></a><a class="social-link" href="http://github.com/codeneuro/notebooks"><i id="icon" class="fa fa-github-square fa-4x"></i></a></span>
+			<div class="row">
+				<div class="column-10 prefix-2">
+					<h2>try new libraries like <a class="big" href='http://thunder-project.org'>Thunder</a> and <a href='http://spark.apache.org'class="big">Spark</a></h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column-10 prefix-1 suffix-1">
+					<h2>prototype analyses for <a href='http://codeneuro.org/neurofinder' class="big">benchmarking</a> challenges</h2>
+				</div>
 			</div>
 		</div>
-		
-	</section>
 
+	</div>
 
+	<div class="row" style="max-width: 1450px">
+		<div class="column-5 prefix-7" style="text-align: right">
+		<span style='margin-left: 95px'><a class="social-link" href="mailto:info@codeneuro.org"><i id="icon" class="fa fa-envelope-square fa-4x"></i></a><a class="social-link" href="https://twitter.com/CodeNeuro"><i id="icon" class="fa fa-twitter-square fa-4x"></i></a><a class="social-link" href="http://github.com/codeneuro/notebooks"><i id="icon" class="fa fa-github-square fa-4x"></i></a></span>
+		</div>
+	</div>
+	
+</section>
+
+<script>
+
+$.getJSON('http://notebooks.codeneuro.org:8000/stats', function(data) {
+	console.log(data)
+});
+
+</script>
 
 
 
