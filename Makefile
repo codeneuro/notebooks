@@ -1,12 +1,13 @@
 setup:
 	sudo yum update -y
 	sudo yum install -y httpd24 php56 mysql55-server php56-mysqlnd
-	sudo service httpd start
 	sudo yum install -y docker
 	sudo usermod -a -G docker ec2-user
+	newgrp docker
 	sudo service docker start
 
 deploy:
+	sudo service httpd start
 	sudo rm -rf /var/www/html/
 	sudo cp -a site/. /var/www/html/
 
