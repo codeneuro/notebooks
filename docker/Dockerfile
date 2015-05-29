@@ -24,6 +24,7 @@ RUN apt-get install -y libxrender1 fonts-dejavu && apt-get clean
 RUN conda create --yes -q -n python2.7-env python=2.7 nose numpy pandas scikit-learn scikit-image matplotlib scipy seaborn sympy cython patsy statsmodels cloudpickle numba bokeh pillow ipython jsonschema boto
 ENV PATH $CONDA_DIR/bin:$PATH
 RUN conda install --yes numpy pandas scikit-learn scikit-image matplotlib scipy seaborn sympy cython patsy statsmodels cloudpickle numba bokeh pillow && conda clean -yt
+RUN /bin/bash -c "source activate /opt/conda/envs/python2.7-env/ && pip install mistune"
 
 # Thunder setup
 RUN apt-get install -y git python-pip ipython gcc
