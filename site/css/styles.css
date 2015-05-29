@@ -68,7 +68,7 @@ a {
 h2 {
     font-size: 46px;
     margin-top: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     font-weight: 100;
     color: rgb(238,238,238);
 }
@@ -78,7 +78,7 @@ h2 {
 	margin-left: -8px;
 	margin-right: -8px;
 	margin-top: -8px;
-    padding-bottom: 49px;
+    padding-bottom: 45px;
     padding-top: 9px;
 	//border-bottom: 5px rgb(69, 133, 255) dotted;
 }
@@ -93,7 +93,7 @@ h2 {
 }
 
 .info {
-	margin-top: 35px;
+	margin-top: 25px;
 	font-size: 24px;
     line-height: 150%;
 }
@@ -112,7 +112,7 @@ h2 {
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
     border-radius: 8px;
-    margin-top: 90px;
+    margin-top: 73px;
     border: 4px dotted rgb(69, 133, 255);
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;

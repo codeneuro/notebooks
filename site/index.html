@@ -25,7 +25,7 @@
 
     <div class="prefix-1 column-3">
       <a class='launch-wrapper' href='http://notebooks.codeneuro.org:8000' target="_blank"><button class='launch'><p class='launch-text'>launch</p></button></a>
-      <p class="info">runs live jupyter notebooks using <a class="small" href='https://github.com/docker/docker'>docker</a> and <a class="small" href='https://github.com/jupyter/tmpnb'>tmpnb</a><br>available: X of 25</p>
+      <p class="info">runs live jupyter notebooks using <a class="small" href='https://github.com/docker/docker'>docker</a> and <a class="small" href='https://github.com/jupyter/tmpnb'>tmpnb</a><br>available: <span id='free'></span> of <span id='total'></span></p>
     </div>
 
   </div>
@@ -66,9 +66,20 @@
 
 <script>
 
-$.getJSON('http://notebooks.codeneuro.org:8000/stats', function(data) {
-	console.log(data)
-});
+	$.getJSON('http://notebooks.codeneuro.org:8000/stats', function(data) {
+		var free = data.available
+		var total = data.capacity
+		$('#free').text(free)
+		$('#total').text(total)
+		var ratio = free / total
+		if (ratio < 0.666 & ratio > 0.333) {
+			$('#free').css('color', 'rgb(247,142,52)')
+		} else if (ratio < 0.333) {
+			$('#free').css('color', 'rgb(227,46,23)')
+		} else {
+			$('#free').css('color', 'rgb(39,184,90)')
+		}
+	});
 
 </script>
 
