@@ -8,20 +8,28 @@ a {color: rgb(20,20,20); font-size: 16px; font-family: 'Abel';}
 .toolbar_info, .list-container {color: black;}
 
 /* NOTEBOOK */
+div#maintoolbar {display: none !important;}
 
 div#notebook {border-top: none;}
+div#notebook-container {box-shadow: none; -webkit-box-shadow: none; padding: 20px; border-radius: 5px;}
 
-div.input_prompt {color: rgb(69, 133, 255);}
-div.output_prompt {color: #ab7967;}
+.notebook_app div#header {box-shadow: none; -webkit-box-shadow: none;}
+.notebook_app {background-color: rgb(234, 234, 242);}
+
+div.input_prompt {color: rgb(168, 168, 176);}
+div.output_prompt {color: #4f5b66;}
 div.input_area {
-  border-radius: 3px;
-  border: 1px solid #c0c5ce;
+  border-radius: 4px;
+  border: none;
+  background-color: rgb(234, 234, 242);
+  padding: 2px;
 }
 div.output_area pre {font-weight: normal; color: #4f5b66;}
 div.output_subarea {font-weight: normal; color: #4f5b66;}
 
-div.cell.selected {border-radius: 3px}
+div.cell.selected {border-radius: 4px; border-color: white; border-left: 7px solid rgb(232,232,242); background: none; margin-left: -6px;}
+div.cell {margin-bottom: 5px;}
 
-div.edit_mode {border-color: rgb(69, 133, 255);}
+.edit_mode div.cell.selected {border-radius: 4px; border-color: white; border-left: 7px solid rgb(212,212,222); margin-left: -6px;}
 
 div#menus {background: none; border: none;}
