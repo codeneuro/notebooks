@@ -7,7 +7,15 @@
 body {
 	background-color: rgb(69, 133, 255);
 	font-family: Abel;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
 }
+
 
 a {
     -webkit-transition: all 0.3s ease;
@@ -46,6 +54,16 @@ a {
     color: rgb(170,170,170);
 }
 
+.social-link {
+    color: white;
+    margin-right: 20px;
+    opacity: 0.6;
+}
+
+.social-link:hover {
+    opacity: 0.3;
+}
+
 
 h2 {
     font-size: 46px;
@@ -60,13 +78,18 @@ h2 {
 	margin-left: -8px;
 	margin-right: -8px;
 	margin-top: -8px;
-    padding-bottom: 65px;
-    padding-top: 7px;
+    padding-bottom: 40px;
+    padding-top: 5px;
 	//border-bottom: 5px rgb(69, 133, 255) dotted;
 }
 
 #bottom {
     padding-top: 20px;
+}
+
+#final {
+    position: relative;
+    right: 0px;
 }
 
 .info {
