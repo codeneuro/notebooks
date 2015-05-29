@@ -16,7 +16,7 @@ div#notebook-container {box-shadow: none; -webkit-box-shadow: none; padding: 20p
 .notebook_app div#header {box-shadow: none; -webkit-box-shadow: none;}
 .notebook_app {background-color: rgb(234, 234, 242);}
 
-div.input_prompt {color: rgb(168, 168, 176);}
+div.input_prompt {color: rgb(148, 148, 166);}
 div.output_prompt {color: #4f5b66;}
 div.input_area {
   border-radius: 4px;
