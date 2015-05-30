@@ -40,15 +40,8 @@ RUN printf '[s3]\ncalling_format = boto.s3.connection.OrdinaryCallingFormat' >> 
 RUN git clone https://github.com/CodeNeuro/neurofinder
 ENV NEUROFINDER_ROOT $HOME/neurofinder
 
-# Make Tutorial/Community/Neurofinder folders
-RUN mkdir $HOME/notebooks
-
-# Do the symlinking
-RUN mkdir $HOME/notebooks/neurofinder
-RUN mkdir $HOME/notebooks/tutorials
-RUN echo "In directory: " `pwd`
-RUN ln -s $(readlink -f $THUNDER_ROOT/python/doc/tutorials/*.ipynb) $HOME/notebooks/tutorials/
-RUN ln -s $(readlink -f $NEUROFINDER_ROOT/notebooks/*.ipynb) $HOME/notebooks/neurofinder/
+# Add the notebooks directory
+ADD notebooks $HOME/notebooks
 
 # Set up the kernelspec
 RUN /opt/conda/envs/python2.7-env/bin/ipython kernelspec install-self
