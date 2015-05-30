@@ -13,6 +13,9 @@ div#maintoolbar {display: none !important;}
 div#notebook {border-top: none;}
 div#notebook-container {box-shadow: none; -webkit-box-shadow: none; padding: 20px; border-radius: 5px;}
 
+.item_name {color: rgb(80,80,100);}
+.item_name:hover {color: rgb(20,20,30);}
+
 .notebook_app div#header {box-shadow: none; -webkit-box-shadow: none;}
 .notebook_app {background-color: rgb(234, 234, 242);}
 
@@ -28,7 +31,7 @@ div.output_area pre {font-weight: normal; color: #4f5b66;}
 div.output_subarea {font-weight: normal; color: #4f5b66;}
 
 div.cell.selected {border-radius: 4px; border-color: white; border-left: 7px solid rgb(232,232,242); background: none; margin-left: -6px;}
-div.cell {margin-bottom: 5px;}
+div.cell {margin-bottom: 5px; border-left: 7px solid white; margin-left: -6px;}
 
 .edit_mode div.cell.selected {border-radius: 4px; border-color: white; border-left: 7px solid rgb(212,212,222); margin-left: -6px;}
 
@@ -47,12 +50,53 @@ a {
 .call-link {
   font-size: 24px;
   border-bottom: 2px dotted rgb(80,80,80);
-  color: rgb(251,170,50);
+  color: rgb(69, 133, 255);
 }
 
 .call-link:hover {
-  color: rgb(201,113,51);
+  color: rgb(59, 90, 150);
 }
+
+.call-link:focus {
+  color: rgb(69, 133, 255);
+}
+
+.call-link.thunder {
+  color: rgb(235,139,52);
+}
+
+.call-link.thunder:hover {
+  color: rgb(200,110,52);
+}
+
+.call-link.thunder:focus {
+  color: rrgb(235,139,52);
+}
+
+.call-link.datasets {
+  color: rgb(238,112,71);
+}
+
+.call-link.datasets:hover {
+  color: rgb(210,80,52);
+}
+
+.call-link.datasets:focus {
+  color: rgb(238,112,71);
+}
+
+.call-link.neurofinder {
+  color: rgb(43,182,115);
+}
+
+.call-link.neurofinder:hover {
+  color: rgb(30,150,80);
+}
+
+.call-link.neurofinder:focus {
+  color: rgb(43,182,115);
+}
+
 
 /* WELCOME PAGES */
 .button-link {
@@ -87,15 +131,15 @@ a {
   color: white;
 }
 
-.button-link:target {
+.button-link:focus {
   color: white;
 }
 
-.button:target {
+.button:focus {
   color: white;
 }
 
-.info {
+.info-text {
   font-size: 24px; 
   font-family: 'Abel'; 
   line-height: 30px;
