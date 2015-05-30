@@ -68,7 +68,7 @@ a {
 h2 {
     font-size: 46px;
     margin-top: 20px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     font-weight: 100;
     color: rgb(238,238,238);
 }
@@ -78,8 +78,8 @@ h2 {
 	margin-left: -8px;
 	margin-right: -8px;
 	margin-top: -8px;
-    padding-bottom: 45px;
-    padding-top: 9px;
+    padding-bottom: 54px;
+    padding-top: 13px;
 	//border-bottom: 5px rgb(69, 133, 255) dotted;
 }
 
