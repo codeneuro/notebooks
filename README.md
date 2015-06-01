@@ -10,7 +10,7 @@ We're using the [tmpnb](http://github.com/jupyter/tmpnb) service to launch docke
 
 ## The docker images
 
-This repo contains images for `codeneuro/base` and `[codeneuro/notebooks](https://registry.hub.docker.com/u/codeneuro/notebooks/)`. The base image is based on [jupyter/minimal](https://github.com/jupyter/docker-demo-images/tree/master/common), and the notebooks image sets up a scientific computing environment with local versions of tools like [Spark](http://spark.apache.org) and [Thunder](http://thunder-project.org)
+This repo contains images for `codeneuro/base` and [`codeneuro/notebooks`](https://registry.hub.docker.com/u/codeneuro/notebooks/). The `base` image is based on [`jupyter/minimal`](https://github.com/jupyter/docker-demo-images/tree/master/common), and the `notebooks` image sets up a custom scientific computing environment with local versions of tools like [Spark](http://spark.apache.org) and [Thunder](http://thunder-project.org).
 
 ## How to deploy
 
