@@ -6,7 +6,7 @@ PUBLIC_IP_URL = "http://169.254.169.254/latest/meta-data/public-ipv4"
 CONF_FILE = "conf.yml"
 
 def get_public_ip(settings): 
-    return requests.get(PUBLIC_IP_URL) + ':' + settings['worker']['port']
+    return requests.get(PUBLIC_IP_URL).text + ':' + settings['worker']['port']
 
 def get_master_url(settings): 
     return settings['master']['host'] + ':' + settings['master']['port']
