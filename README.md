@@ -21,7 +21,7 @@ make setup
 make launch
 ```
 
-If you want to build your own version of this setup, start with this repo and just modify the website content and docker images accordingly. We will work on simpler strategies for customization in the future.
+If you want to build your own version, start with this repo and just modify the website content and docker images accordingly. We will work on simpler strategies for customization in the future.
 
 ## The docker images
 
