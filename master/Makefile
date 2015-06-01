@@ -1,8 +1,8 @@
 setup:
 	sudo yum update -y
-	sudo yum install -y httpd24 php56 mysql55-server php56-mysqlnd
+	sudo yum install -y httpd24 php56 mysql55-server php56-mysqlnd gcc
 	git clone https://github.com/andrewosh/tmpnb-redirector.git tmpnb-redirector
-	pip install -r tmpnb-redirector/requirements.txt
+	sudo pip install -r tmpnb-redirector/requirements.txt
 
 deploy:
 	sudo service httpd start
