@@ -6,7 +6,7 @@ Interactive notebooks for trying analyses and exploring datasets
 
 ## How it works
 
-We're using the [tmpnb](http://github.com/jupyter/tmpnb) service to launch docker containers on demand. Each user who launches from [notebooks.codeneuro.org](http://notebooks.codeneuro.org) gets their own temporary interactive environment, preloaded with a vartiety of executable notebooks. The environments will be deleted after an hour of inactivity, so *this is not intended for real work!* But it is a great way to experiment with new tools and explore data sets. And [public data repositories](http://datasets.codeneuro.org) can link directly to these notebooks, making this a great way to interactively examine public data sets.
+We're using the [tmpnb](http://github.com/jupyter/tmpnb) service to launch docker containers on demand. Each user who launches from [notebooks.codeneuro.org](http://notebooks.codeneuro.org) gets their own temporary interactive environment, preloaded with a variety of executable notebooks. The environments will be deleted after an hour of inactivity, so *this is not intended for real work!* But it is a great way to experiment with new tools and explore data sets. And [public data repositories](http://datasets.codeneuro.org) can link directly to these notebooks, making this a great way to interactively examine public data sets.
 
 ## How to deploy
 
