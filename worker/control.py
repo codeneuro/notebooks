@@ -1,5 +1,6 @@
 import sys
 import yaml 
+import json
 import requests
 
 PUBLIC_IP_URL = "http://169.254.169.254/latest/meta-data/public-ipv4"
@@ -15,13 +16,13 @@ def start(settings):
     public_ip = get_public_ip(settings)
     url = get_master_url(settings)
     payload = {"host": public_ip}
-    requests.post(url, data=payload)
+    requests.post(url, data=json.dumps(payload))
 
 def stop(settings): 
     public_ip = get_public_ip(settings)
     url = get_master_url(settings)
     payload = {"host": public_ip}
-    requests.delete(url, data=payload)
+    requests.delete(url, data=json.dumps(payload))
 
 if __name__ == "__main__": 
     cmd = sys.argv[1]
