@@ -1,0 +1,8 @@
+master:
+    host: <master_url>
+    port: <master_port>
+
+worker:
+    # The worker registers its hostname instead of its IP for readability's sake 
+    host: <worker_host>
+    port: <worker_port>
