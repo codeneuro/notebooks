@@ -9,7 +9,7 @@ deploy:
 	sudo rm -rf /var/www/html/
 	sudo cp -a site/. /var/www/html/
 	# Query the workers for their availability every 10s (default 60s) 
-	python tmpnb-redirector/redirector.py --stats_period=10
+	screen python tmpnb-redirector/redirector.py --stats_period=10
 
 clean:
 	sudo rm -rf /var/www/html/
