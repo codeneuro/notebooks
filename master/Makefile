@@ -8,7 +8,8 @@ deploy:
 	sudo service httpd start
 	sudo rm -rf /var/www/html/
 	sudo cp -a site/. /var/www/html/
-	python tmpnb-redirector/redirector.py
+	# Query the workers for their availability every 10s (default 60s) 
+	python tmpnb-redirector/redirector.py --stats_period=10
 
 clean:
 	sudo rm -rf /var/www/html/
