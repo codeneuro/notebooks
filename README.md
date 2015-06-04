@@ -10,6 +10,46 @@ We're using the [tmpnb](http://github.com/jupyter/tmpnb) service to launch docke
 
 ## How to deploy
 
+We deploy this infrastructure on Amazon Web Services, but using other environments should be easy as well. To deploy on AWS, we deploy a master service on a single instance and worker services on additional instances. The master runs the Apache web server and the load balancer (based on [tmpnb-redirector](http://github.com/jupyter/tmpnb-redirector), while the workers each run an instance of [tmpnb](http://github.com/jupyter/tmpnb).  
+
+### General 
+```
+git clone http://github.com/codeneuro/notebooks
+cd notebooks
+```
+
+### Master-specific
+
+In the master directory, first run the setup scripts
+```
+cd master
+make setup 
+```
+
+Deploy the Apache web server and start the `screen`ed `redirector.py` process: 
+```
+make deploy
+```
+
+### Worker-specific
+
+In the worker directory, first run the setup scripts and edit `conf.yml`: 
+```
+cd worker
+make setup 
+```
+Each worker contains a `conf.yml` file which specifies: 
+* The hostname of the master node 
+* The port on the master node that handles registration commands (typically 9001) 
+* The hostname of the worker (so that the redirector redirects to readable URLs) 
+* The port of the worker's main tmpnb service (typically 8000)
+
+To deploy the worker, run 
+```
+make launch 
+```
+
+
 We deploy this infrastructure on Amazon Web Services, but using other environments should be easy as well. To deploy on AWS, create an EC2 instance, and make sure ports 80, 8000, and 43 are open. Then ssh into the instance and run:
 
 ```
