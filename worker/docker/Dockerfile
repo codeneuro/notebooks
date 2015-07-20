@@ -12,9 +12,9 @@ ENV SHELL /bin/bash
 RUN apt-get install -y default-jre
 
 # Spark setup 
-RUN wget http://d3kbcqa49mib13.cloudfront.net/spark-1.3.1-bin-hadoop1.tgz 
-RUN tar -xzf spark-1.3.1-bin-hadoop1.tgz
-ENV SPARK_HOME $HOME/spark-1.3.1-bin-hadoop1
+RUN wget http://d3kbcqa49mib13.cloudfront.net/spark-1.4.1-bin-hadoop1.tgz 
+RUN tar -xzf spark-1.4.1-bin-hadoop1.tgz
+ENV SPARK_HOME $HOME/spark-1.4.1-bin-hadoop1
 ENV PATH $PATH:$SPARK_HOME/bin
 RUN sed 's/log4j.rootCategory=INFO/log4j.rootCategory=ERROR/g' $SPARK_HOME/conf/log4j.properties.template > $SPARK_HOME/conf/log4j.properties
 ENV _JAVA_OPTIONS "-Xms512m -Xmx4g" 
@@ -29,10 +29,11 @@ RUN /bin/bash -c "source activate /opt/conda/envs/python2.7-env/ && pip install 
 # Thunder setup
 RUN apt-get install -y git python-pip ipython gcc
 RUN git clone https://github.com/thunder-project/thunder
-RUN /bin/bash -c "source activate /opt/conda/envs/python2.7-env/ && pip install -r thunder/python/requirements.txt"
+RUN /bin/bash -c "source activate /opt/conda/envs/python2.7-env/ && pip install -r thunder/requirements.txt"
 ENV THUNDER_ROOT $HOME/thunder
-ENV PATH $PATH:$THUNDER_ROOT/python/bin
-ENV PYTHONPATH $PYTHONPATH:$THUNDER_ROOT/python
+ENV PATH $PATH:$THUNDER_ROOT/bin
+ENV PYTHONPATH $PYTHONPATH:$THUNDER_ROOT
+
 
 # Configure Boto for S3 access
 RUN printf '[s3]\ncalling_format = boto.s3.connection.OrdinaryCallingFormat' >> ~/.boto
