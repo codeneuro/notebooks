@@ -34,6 +34,11 @@ ENV THUNDER_ROOT $HOME/thunder
 ENV PATH $PATH:$THUNDER_ROOT/bin
 ENV PYTHONPATH $PYTHONPATH:$THUNDER_ROOT
 
+# Bolt setup
+RUN git clone https://github.com/bolt-project/bolt
+RUN /bin/bash -c "source activate /opt/conda/envs/python2.7-env/ && pip install -r bolt/requirements.txt"
+ENV BOLT_ROOT $HOME/bolt
+ENV PYTHONPATH $PYTHONPATH:$BOLT_ROOT
 
 # Configure Boto for S3 access
 RUN printf '[s3]\ncalling_format = boto.s3.connection.OrdinaryCallingFormat' >> ~/.boto
