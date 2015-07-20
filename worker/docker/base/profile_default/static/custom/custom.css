@@ -70,7 +70,19 @@ a {
 }
 
 .call-link.thunder:focus {
-  color: rrgb(235,139,52);
+  color: rgb(235,139,52);
+}
+
+.call-link.bolt {
+  color: rgb(181,196,63);
+}
+
+.call-link.bolt:hover {
+  color: rgb(158,159,54);
+}
+
+.call-link.bolt:focus {
+  color: rgb(181,196,63);
 }
 
 .call-link.datasets {
