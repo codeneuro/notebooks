@@ -15,3 +15,11 @@ c.NotebookApp.trust_xheaders = True
 
 # Include our extra templates
 c.NotebookApp.extra_template_paths = ['/srv/templates/']
+
+# Supply overrides for the tornado.web.Application that the IPython notebook
+# uses.
+c.NotebookApp.tornado_settings = {
+    'headers': {
+        'Content-Security-Policy': "frame-ancestors 'self' http://*.bolt-project.org http://*.thunder-project.org http://*.codeneuro.org"
+    }
+}
